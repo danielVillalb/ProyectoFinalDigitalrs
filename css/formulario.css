@@ -1,0 +1,75 @@
+:root{
+    --rosa:#D01356;
+    --gris:#D9D9D9;
+}
+
+
+.formulario{
+    width: 70%;
+    max-width:840px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    border:1px solid red;
+    background-color:var(--rosa);
+    border-radius:15px;
+
+}
+.formulario h1,h1{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}
+h1{
+    color: black;
+}
+label{
+    width: 90%;
+    height: 32px;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    color: white;
+    margin: 10px auto;
+
+
+}
+input{
+    height: 32px;
+    width: 500px;
+    border-radius:10px;
+    margin-left:10px;
+    background-color: var(--gris);
+}
+.caja{
+    width: 20px;
+    height: 20px;
+    border-radius:20px;
+    background-color: var(--gris);
+}
+.formulario select{
+    width: 500px;
+    height: 32px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: var(--gris);
+    font-size: 20px;
+}
+.formulario select option{
+    text-align: center;
+}
+.formulario label:last-child{
+    justify-content: start;
+}
+h3{
+    text-align: center;
+    font-weight: 300;
+}
+h3 span{
+    font-weight: bold;
+}
+h3:last-child{
+    margin-bottom: 25px;
+}
