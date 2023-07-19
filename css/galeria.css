@@ -1,0 +1,22 @@
+
+
+article ul{
+    display: flex;
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    border: 1px solid red;
+    justify-content: center;
+    margin-bottom: 25px;
+
+}
+article ul li{
+    width: 30%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+
+}
