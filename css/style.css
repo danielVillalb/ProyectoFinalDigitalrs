@@ -15,6 +15,15 @@ body,html{
 body{
     display: flex;
     flex-direction: column;
+    color: white;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(208,19,86,1) 52%, rgba(0,0,0,1) 100%);
+}
+@media(min-width:678px){
+    body{
+        background: white;
+        color: black;
+    }
 }
 /*------------UTILIDADES----------*/
 :root{
@@ -70,7 +79,7 @@ header nav{
     justify-content: space-around;
     align-items:center;
     text-align: center;
-    z-index: 100;
+    z-index: 1000;
     top: 0;
     left: -100%;
     height: 100vh;
@@ -82,15 +91,45 @@ header nav{
     display: flex;
     position: fixed;
     left: 0;
+    z-index: 100;
 }
-
-
 
 header nav a,header a{
     color: white;
     font-size: 16px;
     text-transform: uppercase;
 }
+.escritorio{
+    display: none;
+}
+@media(min-width:678px){
+
+    .menu_hamburguesa{
+        display: none;
+    }
+    .movile{
+        display: none;
+    }
+    .escritorio{
+        display: flex;
+    }
+    .escritorio a{
+        text-align: center;
+        font-weight: bold;
+    }
+    .escritorio a:hover{
+        color: #2e2e2e;
+
+    }
+
+}
+
+
+
+
+
+
+
 /*-----------navegador----------*/
 main{
     display: flex;
@@ -100,7 +139,7 @@ main{
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #2e2e2e;
+    
 }
 
 .hero{
@@ -118,6 +157,7 @@ main{
     filter: drop-shadow(0 2px 5px rgba(255,255,255,0.9));;
     /* box-shadow: 2px 2px 10px white; */
 }
+
 .hero::after{
     content: "";
     width: 100%;
@@ -136,17 +176,27 @@ main{
     text-transform:uppercase;
     font-family: 'Dancing Script', cursive;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
 }
 h1{
     position: relative;
     font-family: 'Dancing Script', cursive;
-    z-index: 1000;
+    z-index: 100;
 }
 section .contenedor{
     width: 90%;
     margin: auto;
 }
+@media(min-width:678px){
+    .hero{
+        height: 90vh;
+        width: 90vw;
+        background-position: top;
+        background-image: url(../assets/img/IMAGENES/banner5.png);
+    }
+}
+
+
 /*--------------variedades de tortas------*/
 h2{
     text-align: center;
@@ -167,96 +217,87 @@ h2{
  */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.galeria{
+ .galeria{
     position: relative;
-    display: flex;
-    width: 80%;
-    margin: auto;
-    gap: 10px!important;
-    justify-content: center;
-    align-items: center;
 }
-.galeria li img{
-    width: 100%;
+.galeria div{
+    overflow: hidden;
 }
-.galeria li{
-    width: 100%;
+.galeria div img{
     height: 100%;
-    margin:0 1rem;
+    width: 100%;
+}
+
+.slick-dots{
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    display: flex;
+    gap: 1rem;
+}
+.slick-track{
+    display: flex!important;
+    gap: 1rem;
+}
+
+.slick-slide{
+    border: 1px solid black;
     display: flex!important;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(0,0,0,.5);
-    box-shadow: 1px 1px 10px rgba(0,0,0,.5);
-    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRU7Tka2y2S3Fb3GRaCysGq1Z-WMba3qXS5Kz1xej5vg&s);
-    background-size: cover; */
 }
-/* --------Cargando imagenes------------*/
-.galeria li:nth-child(1){
+
+
+
+@media(min-width:678px){
+    .slick-slide{
+        max-width: 600px;
+        height: 300px;
+    }
+    .galeria{
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
+
+
+main{
+    padding-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------Cargando imagenes------------
+.galeria div:nth-child(1){
     background-image: url(../assets/img/IMAGENES/torta2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.galeria li:nth-child(2){
+.galeria div:nth-child(2){
     background-image: url(../assets/img/IMAGENES/torta3.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.galeria li:nth-child(3){
+.galeria div:nth-child(3){
     background-image: url(../assets/img/IMAGENES/torta4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.galeria li:nth-child(4){
-    background-image: url(../assets/img/IMAGENES/tortas.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.galeria li:nth-child(5){
-    background-image: url(../assets/img/IMAGENES/torta2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.galeria li:nth-child(6){
-    background-image: url(../assets/img/IMAGENES/torta3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.galeria li:nth-child(7){
-    background-image: url(../assets/img/IMAGENES/torta3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.galeria li:nth-child(8){
-    background-image: url(../assets/img/IMAGENES/torta3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 
+ */
 
 
 
@@ -286,21 +327,16 @@ h2{
 
 .slick-prev{
     left: -2rem;
-
     transform: rotate(-180deg);
 }
 .slick-next{
     position: absolute;
     right: -2rem;
-
 }
 .slick-dots{
     display: flex!important;
-    gap: 1rem;
     position: absolute;
     bottom: -1.5rem;
-
-
 }
 .slick-dots li{
     border: none;

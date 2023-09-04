@@ -5,28 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/formulario.css">
 </head>
 <body>
-    <header>
-        <a href="../index.html">Logo</a>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="./decoraciones.html">Decoraciones && Tortas</a>
-            <a href="./galeria.html">Galeria</a>
-            <a href="./nosotros.html">Sobre Nosotros</a>
-        </nav>
-    </header>
+    <header id="header"></header>
     <main>
-        <h1>Presupuesto</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus at iste quia eligendi a quidem unde aspernatur placeat mollitia quam amet vero, saepe doloremque ad sint modi neque temporibus ab!</p>
+        <div class="textoForm">
+            <h1>Presupuesto</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus at iste quia eligendi a quidem unde aspernatur placeat mollitia quam amet vero, saepe doloremque ad sint modi neque temporibus ab!</p>
+        </div>
         <section class="contenedorForm ">
             <form action="" class="formulario">
-                <h1>Formulario de presupuesto</h1>
-                <label for="name">Nombre<input type="text"></label>
-                <label for="number">Telefono<input type="number"></label>
-                <label for="slc">Eventos
+                <h2>Formulario de presupuesto</h2>
+                <div class="formulario">
+                    <div class="contactos">
+                        <label for="name">Nombre: <input type="text" placeholder="Daiana"></label>
+                        <label for="number">Telefono: <input type="number" placeholder="1188556644"></label>
+                    </div>
+                    <label for="slc">Eventos
                 <select name="slc" id="slc">
                     <option value="selecciona">--Seleccione el evento--</option>
                     <option value="infantiles">Fiestas Infantiles</option>
@@ -45,8 +43,9 @@
                     <option value="torta4">4</option>
                     <option value="torta5">5</option>
                 </select></label>
-                <label for="tematica">con tematica<input type="checkbox" class="caja"><input type="text"></label>
+                <label for="tematica">con tematica<input type="checkbox" class="caja"><input type="text" placeholder="Dragon ball z, Los simpson..."></label>
                 <label for="decoracion">Decoracion<input type="checkbox" id="decoracion" class="caja"></label>
+            </div>
             </form>
         </section>
         <h3>Recuerde reservar con <span>48 hs</span> de anticipacion para tortas </h3>
@@ -80,5 +79,10 @@
             <a href="#">W</a>
         </div>
     </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.js"></script>
+    <script src="../js/galeria.js"></script>
 </body>
 </html>

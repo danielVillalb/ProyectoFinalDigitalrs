@@ -1,9 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
 :root{
     --rosa:#D01356;
     --gris:#D9D9D9;
 }
+.textoForm{
+    text-align: center;
+    margin: 2rem 0;
+}
+h1{
+    margin: 1rem 0;
+}
+.contenedorForm{
+    width: 90%;
+    margin: auto;
+    border: 1px solid white;
+    margin-bottom: 2rem;
+}
+h2{
+    margin: 0;
+    padding: .5rem;
+}
+.formulario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.5);
+}
+.formulario label{
+    height: 2rem;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .5rem;
+}
+.formulario input{
+    width: 30%;
+}
+
+.contactos{
+    display: flex;
+    flex-direction: column;
+}
+.contactos input{
+    width: 50%;
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .formulario{
     width: 70%;
     max-width:840px;
@@ -13,7 +96,6 @@
     border:1px solid red;
     background-color:var(--rosa);
     border-radius:15px;
-
 }
 .formulario h1,h1{
     text-align: center;
@@ -72,4 +154,4 @@ h3 span{
 }
 h3:last-child{
     margin-bottom: 25px;
-}
+} */

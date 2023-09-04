@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>My Now Amazing Webpage</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+</head>
+<style>
+    .carousel-container {
+        width: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .carousel-slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 300px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-slider">
+            <div class="carousel-slide">
+                <img src="imagen1.jpg" alt="Imagen 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagen2.jpg" alt="Imagen 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagen3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <button id="prevBtn">Anterior</button>
+        <button id="nextBtn">Siguiente</button>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+           const slider = document.querySelector('.carousel-slider');
+const slides = document.querySelectorAll('.carousel-slide');
+let slideIndex = 0;
+
+// Función para avanzar al siguiente slide
+function nextSlide() {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    updateSliderPosition();
+}
+
+// Función para actualizar la posición del slider
+function updateSliderPosition() {
+    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+// Agregar event listeners a las imágenes para avanzar al siguiente slide
+slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+        slideIndex = index + 1;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        updateSliderPosition();
+    });
+});
+
+// Iniciar el carrusel
+updateSliderPosition();
+        });
+    </script>
+
+</body>
+
+</html>
