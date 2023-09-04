@@ -175,6 +175,7 @@ h2{
     display: flex!important;
     justify-content: center;
     align-items: center;
+
     /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRU7Tka2y2S3Fb3GRaCysGq1Z-WMba3qXS5Kz1xej5vg&s);
     background-size: cover; */
 }
@@ -222,6 +223,7 @@ h2{
 
 .slick-dots .slick-active{
     background-color: #D01356;
+    border: 1px solid red;
 }
 
 h2{
